@@ -26,10 +26,7 @@ module.exports = {
     try {
       const getAll = await Links.findAll();
 
-      res.status(200).json({
-        status: "Sukses Membuat Data Link",
-        data: getAll
-      });
+      res.status(200).json(getAll);
     } catch (err) {
       res.status(400).json({
         status: "FAIL",
