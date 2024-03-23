@@ -17,4 +17,11 @@ app.use(morgan("dev"));
 
 app.use(router);
 
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => {
+  console.log(`Server listening on http://localhost:${port}`);
+  console.log(`Server on at ${Date(Date.now)}`);
+});
+
 module.exports = app;
